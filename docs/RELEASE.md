@@ -12,7 +12,7 @@ Production has not received the theme, plugin or database changes. The registere
 - `reports/`: Lighthouse, axe, responsive checks, validation and settings-hash evidence.
 - `tests/`: read-only server validation assertions and guarded staging merchandising setup.
 
-GitHub review repository: https://github.com/jtakyi88/seedprints. Phase 1 changes are proposed as ten ordered draft pull requests, followed by the storefront rebuild. Merging does not deploy to production.
+GitHub review repository: https://github.com/jtakyi88/seedprints. Review history consists of ten ordered Phase 1 pull requests, followed by the storefront rebuild. GitHub records their current merge status. Merging does not deploy to production.
 
 ## Remaining launch work
 

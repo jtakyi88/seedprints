@@ -1,0 +1,10 @@
+Fresh pre-merge verification, October 27, 2026
+
+23 read-only staging validation assertions passed.
+All deployed PHP syntax checks passed.
+276 published theme/plugin files match deployed staging byte-for-byte.
+7 first-party JavaScript syntax checks passed.
+386 base-price rows and commerce settings hashes match the original source snapshot.
+No CI checks are configured in GitHub.
+
+Open production-launch items remain documented in docs/RELEASE.md: PDP LCP, field INP, email offer/flows, merchant payment validation and owner policy/content review.

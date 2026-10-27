@@ -2,7 +2,7 @@
 
 Repository: https://github.com/jtakyi88/seedprints
 
-All PRs are drafts; none has been merged or deployed. The repository was empty, so `main` contains the project introduction and ignore rules.
+The PRs were initially opened as drafts. GitHub records their current merge status. Merging does not deploy to production. The repository was empty, so `main` contains the project introduction and ignore rules.
 
 Review Phase 1 PRs 1–10 in order, then the storefront rebuild. Each PR initially targets the preceding branch to show only its incremental changes. After merging a predecessor into `main`, retarget the next PR to `main` and verify its diff before merging. Do not merge later fixes into an already merged stack branch.
 

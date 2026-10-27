@@ -8,4 +8,4 @@ See [architecture and audit](docs/ARCHITECTURE.md), [components](docs/COMPONENTS
 
 Tests are for the protected staging environment. HTTP tests create synthetic cart sessions; the review-photo test creates a clearly marked pending review and must not be run against production. No payment test credentials or secrets are included. Production payment and email services are not configured by this repository.
 
-See [draft PR review order](docs/REVIEW-INDEX.md). After each predecessor merges into `main`, retarget the next PR to `main` before merging. Merging does not deploy.
+See [PR review order](docs/REVIEW-INDEX.md). After each predecessor merges into `main`, retarget the next PR to `main` before merging. Merging does not deploy.
