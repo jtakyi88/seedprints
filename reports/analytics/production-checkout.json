@@ -1,0 +1,33 @@
+{
+  "native_add_to_cart": true,
+  "checkout_form": true,
+  "payment_methods": [
+    "square_credit_card",
+    "square_cash_app_pay"
+  ],
+  "wallet_element_ids": [
+    "wc-square-payment-gateway-payment-form-css",
+    "wc-square-cash-app-pay-css",
+    "wc-square-digital-wallet-css",
+    "wc-square-digital-wallet",
+    "wc-square-google-pay",
+    "wc-square-wallet-divider",
+    "payment_method_square_credit_card",
+    "payment_method_square_cash_app_pay",
+    "wc-square-cash-app-pay-hidden-fields",
+    "wc-square-cash-app-pay-payment-nonce",
+    "wc-square-cash-app-payment-form",
+    "wc-square-payment-gateway-payment-form-js-extra",
+    "wc-square-payment-gateway-payment-form-js",
+    "wc-square-payment-form-js",
+    "wc-square-square-credit-card-payment-form-inline-js-after",
+    "wc-square-cash-app-pay-js",
+    "wc-square-cash-app-pay-inline-js-after",
+    "wc-square-digital-wallet-js",
+    "wc-square-digital-wallet-inline-js-after"
+  ],
+  "critical_error": false,
+  "orders_created": 0,
+  "payments_attempted": 0,
+  "emails_sent": 0
+}

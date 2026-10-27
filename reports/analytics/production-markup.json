@@ -1,0 +1,11 @@
+{
+  "production": "1",
+  "analytics_allowed": "1",
+  "ga4_destination_configured": true,
+  "analytics_asset": true,
+  "native_woocommerce_provider_printed": false,
+  "google_tag_retained": true,
+  "adsense_retained": true,
+  "simple_form_metadata": true,
+  "critical_error": false
+}
