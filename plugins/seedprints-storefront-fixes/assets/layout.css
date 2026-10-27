@@ -40,3 +40,5 @@ body .et-single-buy-now .button-text { color:#1f1b16 !important; }
   .back-top { transition: none !important; }
 }
 body .et-single-buy-now,body .et-single-buy-now .button-text{background:#1f1b16!important;color:#faf6ef!important}body .posted_in .detail-content,body .posted_in .detail-content a{color:#625b53!important}
+/* Woo's slideDown also animates margins; reserve the entire region, including spacing. */
+.single-product .single_variation_wrap .single_variation{min-block-size:88px!important;height:auto!important;margin-block:0!important;padding-block:0!important;transition:none!important;animation:none!important}
