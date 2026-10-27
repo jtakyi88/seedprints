@@ -1,0 +1,18 @@
+/* XStore's current global styles give body a -2px margin. Fix its geometry. */
+html body { margin: 0 !important; }
+.spfix-shop-title { margin-block: 0 24px; font-size: clamp(28px, 4vw, 48px); }
+/* WooCommerce toggles this region when a variation is selected. Keep its slot. */
+.single-product .single_variation_wrap .single_variation {
+  display: block !important;
+  min-block-size: 88px;
+}
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid #5b6b3a;
+  outline-offset: 4px;
+}
+.back-top { min-width: 44px; min-height: 44px; }
+.back-top.spfix-footer-visible { visibility: hidden !important; pointer-events: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .back-top { transition: none !important; }
+}
