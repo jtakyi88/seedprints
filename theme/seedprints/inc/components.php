@@ -71,8 +71,8 @@ function sp_products( $collection = '', $limit = 8 ) {
 
 function sp_render_hero( $a ) { ?>
 	<section class="sp-hero">
-		<div class="sp-hero-photo"><?php echo sp_hero_media( $a['imageId'] ?: 11884, 'Man wearing the Jesus Died Once, Alive Forever tee' ); ?></div>
 		<div class="sp-container sp-hero-inner"><div class="sp-hero-copy"><p class="sp-eyebrow">Bible made simple</p><h1><?php echo esc_html( $a['heading'] ?: 'Wear the Word.' ); ?></h1><p class="sp-lead"><?php echo esc_html( $a['body'] ?: 'Meaningful apparel and everyday pieces that keep Scripture close.' ); ?></p><div class="sp-actions"><?php echo sp_button( 'Shop bestsellers', home_url( '/shop/?orderby=popularity' ) ); echo sp_button( 'Design your own', home_url( '/custom/' ), true ); ?></div></div></div>
+		<div class="sp-hero-photo"><?php echo sp_hero_media( $a['imageId'] ?: 11884, 'Man wearing the Jesus Died Once, Alive Forever tee' ); ?></div>
 	</section>
 <?php }
 
