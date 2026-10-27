@@ -181,6 +181,7 @@
     (choice || missing[0]).focus();
   }, true);
   function initCart(form) {
+    if (form.querySelector('[data-sp-native-configuration], [name="prad_selection"]')) return;
     if (form.dataset.spfixBound) return;
     form.dataset.spfixBound = 'yes';
     form.addEventListener('submit', async event => {
