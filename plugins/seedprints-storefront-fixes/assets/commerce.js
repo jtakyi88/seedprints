@@ -53,7 +53,7 @@
   }
   function updateBagLabel() {
     const count = Number(document.querySelector('.spfix-bag-count')?.textContent || 0);
-    document.querySelector('.spfix-bag-trigger')?.setAttribute('aria-label', `Open your bag, ${count} ${count === 1 ? 'item' : 'items'}`);
+    document.querySelector('.spfix-bag-trigger')?.setAttribute('aria-label', `Bag ${count} ${count === 1 ? 'item' : 'items'}. Open your bag.`);
   }
   updateBagLabel();
   function added(opener) {
