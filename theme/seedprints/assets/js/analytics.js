@@ -6,7 +6,7 @@
   const selections = new WeakMap(), listed = new WeakMap();
   const names = new Set(['view_item_list','view_item','add_to_cart','begin_checkout','purchase','custom_order_start','custom_order_submit']);
   function track(name, data = {}) {
-    if (!cfg.production || cfg.analyticsAllowed === false || !names.has(name)) return;
+    if (!cfg.production || !cfg.analyticsAllowed || !names.has(name)) return;
     window.dataLayer = window.dataLayer || [];
     if (data.ecommerce) window.dataLayer.push({ecommerce:null});
     window.dataLayer.push({event:name,...data});
