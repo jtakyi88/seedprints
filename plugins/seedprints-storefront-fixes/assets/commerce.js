@@ -236,7 +236,7 @@
       }
     });
   }
-  window.seedprintsDialogs = {open:openDialog, initCart};
+  window.seedprintsDialogs = {open:openDialog, initCart, refreshBag};
   document.querySelectorAll('form.cart:not(.grouped_form)').forEach(initCart);
 
   bag?.addEventListener('click', async event => {
