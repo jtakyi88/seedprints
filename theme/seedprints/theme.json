@@ -1,0 +1,246 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "custom": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#1F1B16"
+        },
+        {
+          "slug": "parchment",
+          "name": "Parchment",
+          "color": "#FAF6EF"
+        },
+        {
+          "slug": "linen",
+          "name": "Linen",
+          "color": "#EFE7DA"
+        },
+        {
+          "slug": "seed-red",
+          "name": "Seed Red",
+          "color": "#C8102E"
+        },
+        {
+          "slug": "olive",
+          "name": "Olive",
+          "color": "#5B6B3A"
+        },
+        {
+          "slug": "gold",
+          "name": "Gold",
+          "color": "#B8893B"
+        },
+        {
+          "slug": "stone",
+          "name": "Stone",
+          "color": "#8A8178"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "defaultFontSizes": false,
+      "fontFamilies": [
+        {
+          "slug": "display",
+          "name": "Fraunces",
+          "fontFamily": "Fraunces, Georgia, serif",
+          "fontFace": [
+            {
+              "fontFamily": "Fraunces",
+              "fontStyle": "normal",
+              "fontWeight": "400 700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/fraunces-latin.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "body",
+          "name": "Inter",
+          "fontFamily": "Inter, system-ui, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "400 700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/inter-latin.woff2"
+              ]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "0.875rem",
+          "fluid": false
+        },
+        {
+          "slug": "body",
+          "name": "Body",
+          "size": "1rem",
+          "fluid": false
+        },
+        {
+          "slug": "lead",
+          "name": "Lead",
+          "size": "1.25rem",
+          "fluid": false
+        },
+        {
+          "slug": "section",
+          "name": "Section",
+          "size": "2.5rem",
+          "fluid": {
+            "min": "1.75rem",
+            "max": "2.5rem"
+          }
+        },
+        {
+          "slug": "hero",
+          "name": "Hero",
+          "size": "5rem",
+          "fluid": {
+            "min": "2.5rem",
+            "max": "5rem"
+          }
+        }
+      ]
+    },
+    "spacing": {
+      "defaultSpacingSizes": false,
+      "units": [
+        "px",
+        "rem",
+        "%",
+        "vw"
+      ],
+      "spacingSizes": [
+        {
+          "slug": "1",
+          "name": "8",
+          "size": "8px"
+        },
+        {
+          "slug": "2",
+          "name": "16",
+          "size": "16px"
+        },
+        {
+          "slug": "3",
+          "name": "24",
+          "size": "24px"
+        },
+        {
+          "slug": "4",
+          "name": "32",
+          "size": "32px"
+        },
+        {
+          "slug": "5",
+          "name": "40",
+          "size": "40px"
+        },
+        {
+          "slug": "6",
+          "name": "48",
+          "size": "48px"
+        },
+        {
+          "slug": "8",
+          "name": "64",
+          "size": "64px"
+        },
+        {
+          "slug": "12",
+          "name": "96",
+          "size": "96px"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|parchment",
+      "text": "var:preset|color|ink"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize": "var:preset|font-size|body",
+      "lineHeight": "1.6"
+    },
+    "spacing": {
+      "blockGap": "var:preset|spacing|3",
+      "padding": {
+        "left": "var:preset|spacing|2",
+        "right": "var:preset|spacing|2"
+      }
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontWeight": "600",
+          "lineHeight": "1.15"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var:preset|font-size|hero"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var:preset|font-size|section"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|ink"
+        }
+      },
+      "button": {
+        "border": {
+          "radius": "999px"
+        },
+        "color": {
+          "background": "var:preset|color|ink",
+          "text": "var:preset|color|parchment"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|body",
+          "fontWeight": "600"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

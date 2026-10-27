@@ -1,0 +1,25 @@
+No syntax errors detected in wp-content/themes/seedprints/functions.php
+No syntax errors detected in wp-content/themes/seedprints/woocommerce/single-product/product-image.php
+No syntax errors detected in wp-content/themes/seedprints/lib/commerce/migrations/reconcile-review-counts.php
+No syntax errors detected in wp-content/themes/seedprints/lib/commerce/templates/commerce-page.php
+No syntax errors detected in wp-content/themes/seedprints/lib/commerce/includes/commerce.php
+No syntax errors detected in wp-content/themes/seedprints/lib/commerce/includes/layout.php
+No syntax errors detected in wp-content/themes/seedprints/lib/commerce/includes/checkout.php
+No syntax errors detected in wp-content/themes/seedprints/lib/commerce/seedprints-storefront-fixes.php
+No syntax errors detected in wp-content/themes/seedprints/inc/pages.php
+No syntax errors detected in wp-content/themes/seedprints/inc/components.php
+No syntax errors detected in wp-content/themes/seedprints/inc/size-guide.php
+No syntax errors detected in wp-content/themes/seedprints/inc/catalog.php
+No syntax errors detected in wp-content/plugins/seedprints-core/seedprints-core.php
+No syntax errors detected in wp-content/plugins/seedprints-core/includes/custom.php
+No syntax errors detected in wp-content/plugins/seedprints-core/includes/review-photos.php
+No syntax errors detected in wp-content/plugins/seedprints-core/includes/pricing.php
+No syntax errors detected in wp-content/plugins/seedprints-core/includes/analytics.php
+No syntax errors detected in wp-content/plugins/seedprints-storefront-fixes/migrations/reconcile-review-counts.php
+No syntax errors detected in wp-content/plugins/seedprints-storefront-fixes/templates/commerce-page.php
+No syntax errors detected in wp-content/plugins/seedprints-storefront-fixes/includes/commerce.php
+No syntax errors detected in wp-content/plugins/seedprints-storefront-fixes/includes/layout.php
+No syntax errors detected in wp-content/plugins/seedprints-storefront-fixes/includes/checkout.php
+No syntax errors detected in wp-content/plugins/seedprints-storefront-fixes/seedprints-storefront-fixes.php
+{"environment":"staging","hashes":{"price_rows":386,"price_sha256":"ad512a745ab8136a3310343502b8bef2eaaa255778db9830ad58624e84a7f553","commerce_settings_sha256":"400f63b833c40304bcd377fcd2c49852094f4c7faa760a77dd01b54b4b6ef883"}}
+{"snippet_id":"5","name":"delete-unused-images","scope":"global","hooks":["restrict_manage_posts","load-upload.php","wp_ajax_mark_unused_images","wp_ajax_remove_delete_prefix"],"code_sha256":"f8380b65615dc6f83ecd5928edc34fb39cab3a619dadb380e5897b3da93e8a97"}

@@ -1,0 +1,6 @@
+<?php
+if('staging'!==wp_get_environment_type())WP_CLI::error('Staging only');
+add_filter('wp_editor_set_quality',function($quality,$mime){return 'image/avif'===$mime?45:('image/webp'===$mime?60:$quality);},10,2);
+$id=11884;$path=get_attached_file($id);$dir=WP_CONTENT_DIR.'/themes/seedprints/assets/media';$result=array('mobile'=>array('webp'=>array(),'avif'=>array()));$size=getimagesize($path);$source_width=$size[0];$crop_height=(int)round($source_width*1.05);$crop_y=(int)round(($size[1]-$crop_height)*.28);
+foreach(array('webp','avif')as$format){$mime='image/'.$format;if(!wp_image_editor_supports(array('mime_type'=>$mime)))continue;foreach(array(400,800,1200)as$width){$editor=wp_get_image_editor($path);if(is_wp_error($editor))continue;$cropped=$editor->crop(0,$crop_y,$source_width,$crop_height,$width,(int)round($width*1.05),false);if(is_wp_error($cropped))continue;$editor->set_quality('avif'===$format?45:60);$filename=$id.'-hero-mobile-'.$width.('avif'===$format?'-q45':'-q60').'.'.$format;$saved=$editor->save($dir.'/'.$filename,$mime);if(!is_wp_error($saved))$result['mobile'][$format][]=array('file'=>$filename,'width'=>$saved['width'],'height'=>$saved['height'],'bytes'=>filesize($saved['path']));}}
+file_put_contents($dir.'/hero-index.json',wp_json_encode(array((string)$id=>$result)));echo wp_json_encode($result)."\n";

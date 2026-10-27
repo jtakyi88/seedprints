@@ -1,11 +1,11 @@
 # Seed Prints storefront
 
-WordPress and WooCommerce storefront redesign. The staging implementation is proposed in draft pull requests; production has not been deployed.
+Protected staging preview: https://try.seedprints.com/
 
-- `plugins/seedprints-storefront-fixes/`: ten ordered Phase 1 review changes.
-- `theme/seedprints/` and `plugins/seedprints-core/`: standalone block theme and companion plugin, proposed after Phase 1.
-- `docs/` and `reports/`: architecture, verification, and remaining launch work in the rebuild PR.
+Standalone WordPress block theme and WooCommerce companion plugin. Activate WooCommerce and Seed Prints Core before switching to the Seed Prints theme. The theme bundles the standalone Phase 1 repair integration as a fallback; an active repair plugin takes precedence. Keep WowAddons for the existing country-choice flow and its original customization-charge definitions.
 
-Protected staging: https://try.seedprints.com/
+See [architecture and audit](docs/ARCHITECTURE.md), [components](docs/COMPONENTS.md), [release limits and rollback](docs/RELEASE.md), and [email integration handoff](docs/EMAIL-FLOWS.md). Source KJV data and font licenses are included.
 
-Review and merge Phase 1 PRs in order, then the storefront PR. `main` starts with documentation only. Deployment requires a separate reviewed release; merging does not deploy.
+Tests are for the protected staging environment. HTTP tests create synthetic cart sessions; the review-photo test creates a clearly marked pending review and must not be run against production. No payment test credentials or secrets are included. Production payment and email services are not configured by this repository.
+
+See [PR review order](docs/REVIEW-INDEX.md). After each predecessor merges into `main`, retarget the next PR to `main` before merging. Merging does not deploy.
