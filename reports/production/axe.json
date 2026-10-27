@@ -1,0 +1,114 @@
+[
+  {
+    "route": "home",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 9
+      },
+      {
+        "id": "color-contrast",
+        "nodeCount": 32
+      }
+    ],
+    "passes": 30,
+    "violations": []
+  },
+  {
+    "route": "shop",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 11
+      },
+      {
+        "id": "color-contrast",
+        "nodeCount": 2
+      }
+    ],
+    "passes": 29,
+    "violations": []
+  },
+  {
+    "route": "pdp",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 6
+      },
+      {
+        "id": "color-contrast",
+        "nodeCount": 10
+      }
+    ],
+    "passes": 32,
+    "violations": []
+  },
+  {
+    "route": "country-pdp",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 5
+      },
+      {
+        "id": "color-contrast",
+        "nodeCount": 6
+      }
+    ],
+    "passes": 31,
+    "violations": []
+  },
+  {
+    "route": "custom",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodeCount": 1
+      }
+    ],
+    "passes": 27,
+    "violations": []
+  },
+  {
+    "route": "story",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 1
+      }
+    ],
+    "passes": 24,
+    "violations": []
+  },
+  {
+    "route": "cart",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 1
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "nodeCount": 1
+      }
+    ],
+    "passes": 33,
+    "violations": []
+  },
+  {
+    "route": "checkout",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 1
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  }
+]

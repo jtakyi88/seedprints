@@ -1,8 +1,8 @@
-# Staging review and release
+# Release operations and historical staging handoff
 
 Preview: https://try.seedprints.com/ (restricted to the owner's current allowed network).
 
-Production has not received the theme, plugin or database changes. The registered development SSH key and scoped staging database access were explicitly approved. No prices, payment/shipping settings or existing content were changed on production.
+The storefront is now deployed to production. See [the production release record](PRODUCTION.md) for current verification and remaining work. The architecture, staging evidence and retained rollback assets below remain relevant; historical launch items have updated status in that record.
 
 ## Deliverables
 
@@ -14,19 +14,19 @@ Production has not received the theme, plugin or database changes. The registere
 
 GitHub review repository: https://github.com/jtakyi88/seedprints. Review history consists of ten ordered Phase 1 pull requests, followed by the storefront rebuild. GitHub records their current merge status. Merging does not deploy to production.
 
-## Remaining launch work
+## Historical checklist — current status in PRODUCTION.md
 
-1. Review staging and approve the final design for production release.
-2. Confirm the email platform/account connection. Existing forms are preserved; welcome, cart recovery and photo-review request flows are not live. The advertised first-order offer needs a verified fulfillment flow before launch; do not create a discount or change prices without owner approval.
+1. Production deployment was authorized and completed; review the current release record for remaining follow-up work.
+2. Confirm the email platform/account connection. Existing forms are preserved. The native welcome confirmation contains the existing 10% coupon; delivery still needs an authorized email test. Cart recovery and photo-review request automations are not live. Do not create a discount or change prices without owner approval.
 3. Square credit cards, digital wallets and Cash App were already enabled in the source settings. Square's native wallet presentation hook is moved ahead of the checkout form. Wallet visibility still requires eligible devices/domains and a safe gateway test environment. Staging blocks payments, and no payment was attempted. PayPal is not installed; adding it requires an owner decision and merchant connection.
 4. Confirm any free-shipping threshold and custom turnaround before adding promotional claims. No new shipping method/rate/threshold was configured.
 5. Provide approved customer lifestyle/review photos to replace mockup imagery where desired. Current source product photos and existing published text testimonials are used; no customer provenance is asserted.
 6. Custom cart submission, duplicate rejection, existing customization charges and a synthetic review-photo upload/moderation test are verified on staging. Finish the merchant test-mode payment/fulfillment checks with provider-approved test credentials; paid checkout has not been tested.
-7. Resolve the PDP mobile LCP gap (2.8 seconds; homepage 2.3 seconds) and validate field INP. Lighthouse TBT is a laboratory proxy, not field INP. Keep staging no-index protection; remove only environment-specific restrictions on an approved production deployment.
+7. See the current live LCP results in PRODUCTION.md and validate field INP. Lighthouse TBT is a laboratory proxy, not field INP. Keep staging no-index protection; remove only environment-specific restrictions on an approved production deployment.
 
 ## Deployment and rollback
 
-Back up production code and database. Deploy code only first, retain XStore and original plugins, run targeted merchandising/content migrations without copying staging orders/users/settings, run the Phase 1 native review recount (`wp eval-file wp-content/plugins/seedprints-storefront-fixes/migrations/reconcile-review-counts.php`), flush rewrites, and verify real gateways/shipping. Preserve the original content for rollback. Switch back to the prior theme and deactivate the two new plugins to restore the legacy rendering; reactivate the previously used page-builder dependencies. The Phase 1 repair plugin can be evaluated independently on the legacy theme. On the new theme it can remain inactive: its bundled fallback has been verified with the standalone plugin disabled.
+Back up production code and database. Deploy code only first, retain XStore and original plugins, run targeted merchandising/content migrations without copying staging orders/users/settings, run the Phase 1 native review recount (`wp eval-file wp-content/plugins/seedprints-storefront-fixes/migrations/reconcile-review-counts.php`), flush rewrites, and verify real gateways/shipping. Preserve the original content for rollback. Switch back to the prior theme and reactivate the previous frontend dependencies. Keep Seed Prints Core active for existing custom carts/orders so their charges and artwork metadata remain supported; custom-order entry may require temporary assistance until roll-forward. The Phase 1 repair plugin can be evaluated independently on the legacy theme. On the new theme it can remain inactive: its bundled fallback has been verified with the standalone plugin disabled.
 
 Do not copy staging wp-config, MU safety guard, .htaccess restrictions, database dumps, customer data, private uploads or sessions into production. Do not delete historical pages, media, forms or plugins without approval.
 

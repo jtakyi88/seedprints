@@ -1,6 +1,9 @@
 # Seed Prints storefront
 
-Protected staging preview: https://try.seedprints.com/
+Live storefront: https://seedprints.com/
+Protected staging: https://try.seedprints.com/
+
+See [production release verification and remaining work](docs/PRODUCTION.md). The release is live; merging future PRs does not automatically deploy.
 
 Standalone WordPress block theme and WooCommerce companion plugin. Activate WooCommerce and Seed Prints Core before switching to the Seed Prints theme. The theme bundles the standalone Phase 1 repair integration as a fallback; an active repair plugin takes precedence. Keep WowAddons for the existing country-choice flow and its original customization-charge definitions.
 

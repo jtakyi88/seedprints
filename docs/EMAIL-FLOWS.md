@@ -1,6 +1,6 @@
 # Email flow implementation handoff
 
-Waiting for the owner's platform choice and authenticated account connection. Do not store API keys in theme code, Git, browser payloads or public files.
+The live site retains its existing HappyForms signup/contact forms and SMTP. The welcome confirmation is enabled and contains the existing 10% coupon; no test email was sent. Advanced flows await the owner's platform choice and authenticated account connection. Do not store API keys in theme code, Git, browser payloads or public files.
 
 Welcome: explicit newsletter subscription → confirmed consent → first-order offer delivery using the owner-approved coupon → weekly verse subscription preferences. Preserve unsubscribe links and the existing list; do not import unconsented addresses.
 

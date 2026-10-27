@@ -1,0 +1,9 @@
+{
+  "missing_size_prompt": true,
+  "regular_chrome_gpay_button_visible": true,
+  "button_top_before": 918.734375,
+  "button_top_after": 918.734375,
+  "custom_verse_lookup_and_live_preview": true,
+  "payments_attempted": 0,
+  "test_emails_sent": 0
+}
