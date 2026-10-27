@@ -11,7 +11,9 @@
   compactHeader();
   function openDialog(dialog, opener) {
     if (!dialog || dialog.open || typeof dialog.showModal !== 'function') return;
-    openers.set(dialog, opener || document.activeElement);
+    const origin = opener || document.activeElement;
+    const parent = origin?.closest?.('dialog[open]');
+    openers.set(dialog, parent ? (openers.get(parent) || origin) : origin);
     dialog.showModal();
     (dialog.querySelector('input[type="search"]') || dialog.querySelector('.spfix-close'))?.focus();
   }
