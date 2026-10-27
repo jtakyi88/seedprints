@@ -1,0 +1,46 @@
+{
+  "home-before": {
+    "performance": 54,
+    "accessibility": 100,
+    "seo": 100,
+    "lcp_ms": 3499.4909300000004,
+    "cls": 0.005005383295467819,
+    "tbt_ms": 7829.000000000004
+  },
+  "home-after": {
+    "performance": 55,
+    "accessibility": 100,
+    "seo": 100,
+    "lcp_ms": 3445.55706,
+    "cls": 0,
+    "tbt_ms": 9105.5
+  },
+  "pdp-after": {
+    "performance": 36,
+    "accessibility": 100,
+    "seo": 92,
+    "lcp_ms": 5233.817999999999,
+    "cls": 0,
+    "tbt_ms": 12419.804999999995
+  },
+  "removed_styles": {
+    "transfer_bytes_in_baseline": 31920,
+    "decoded_css_bytes_in_baseline": 93901,
+    "requests": 2
+  },
+  "limitations": [
+    "Single laboratory samples vary; no causal speed improvement claimed",
+    "Cold mobile browser with anonymous server cache already visited",
+    "Ads, analytics and native wallets retained",
+    "LCP target still unmet; field INP unverified",
+    "pdp-after is the intermediate CSS-only sample before the SEO correction"
+  ],
+  "pdp-final": {
+    "performance": 37,
+    "accessibility": 100,
+    "seo": 100,
+    "lcp_ms": 5072.326280000001,
+    "cls": 0.000136605924338414,
+    "tbt_ms": 13351.280620000003
+  }
+}
