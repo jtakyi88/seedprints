@@ -4,6 +4,7 @@
  * Description: Focused storefront repairs while the standalone block theme is built.
  * Version: 0.1.0
  * Requires Plugins: woocommerce
+ * Requires PHP: 8.0
  * Text Domain: seedprints-fixes
  */
 defined( 'ABSPATH' ) || exit;

@@ -43,7 +43,8 @@ html { scrollbar-gutter:stable; }
 .spfix-remove { display:inline-flex; align-items:center; min-height:44px; color:var(--spfix-muted); text-decoration:underline; }
 .spfix-bag-subtotal { display:flex; justify-content:space-between; gap:16px; margin-top:24px; }
 .spfix-bag-note { color:var(--spfix-muted); font-size:13px; }
-.spfix-bag-actions { display:grid; gap:8px; padding-top:16px; }
+.spfix-bag-actions { display:none; gap:8px; padding-top:16px; }
+.spfix-bag:has(.spfix-bag-list) .spfix-bag-actions { display:grid; }
 .spfix-commerce-page { padding-top:40px; padding-bottom:64px; }
 .spfix-commerce-page > h1 { margin:0 0 32px; color:var(--spfix-ink); font-size:clamp(32px,4vw,48px); }
 .spfix-commerce-page :where(input[type=text],input[type=email],input[type=tel],select) { min-height:48px; }

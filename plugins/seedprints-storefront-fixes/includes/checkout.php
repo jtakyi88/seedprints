@@ -3,6 +3,7 @@ defined( 'ABSPATH' ) || exit;
 
 /** Render native WooCommerce forms; retain saved Elementor content for rollback. */
 add_filter( 'template_include', function ( $template ) {
+	if ( 'seedprints' === get_stylesheet() ) { return $template; }
 	if ( function_exists( 'is_cart' ) && ( is_cart() || is_checkout() ) ) {
 		return SPFIX_DIR . 'templates/commerce-page.php';
 	}
