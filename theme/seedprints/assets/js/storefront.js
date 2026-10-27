@@ -16,7 +16,7 @@
   async function showSaved(){
     const target=document.getElementById('sp-wishlist'); if(!target) return;
     if(!saved.length){target.innerHTML='<p>No saved pieces yet. Tap the heart on a piece you love.</p>';return;}
-    try { const products=await api('products?include='+saved.join(',')); target.innerHTML=products.map(p=>p.html).join(''); markSaved(); }
+    try { const products=await api('products?include='+saved.join(',')); target.innerHTML=products.map(p=>p.html).join(''); markSaved(); window.seedprintsAnalytics?.trackList(target); }
     catch {target.innerHTML='<p>Your saved pieces could not load. Refresh the page to try again.</p>';}
   }
   async function persistSaved(){try{localStorage.setItem('seedprints-wishlist',JSON.stringify(saved));}catch{say('Your browser could not save this list on this device.');} if(cfg.loggedIn)try{await api('wishlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ids:saved})});}catch{say('Saved on this device. Account sync is temporarily unavailable.');}}
@@ -65,12 +65,6 @@
   document.querySelectorAll('#commentform:has([name=sp_review_photo])').forEach(form=>{form.enctype='multipart/form-data';});
   $(document.body).on('woocommerce_update_variation_values', 'form.variations_form',function(){this.querySelectorAll('select').forEach(syncButtons);});
   setTimeout(()=>{$('form.variations_form').trigger('check_variations');},0);
-  // Ecommerce payloads are consumed by the owner's existing consent-aware analytics setup.
-  const track=(name,data={})=>{if(!cfg.production)return;window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:name,...data});};
-  const cards=[...document.querySelectorAll('.sp-product-card')];if(cards.length)track('view_item_list',{ecommerce:{items:cards.slice(0,24).map((card,index)=>({item_id:card.dataset.productId,item_name:card.dataset.productName,price:Number(card.dataset.productPrice),index}))}});
-  $(document.body).on('added_to_cart.spAnalytics',(event,fragments,hash,button)=>{const form=button?.[0]?.closest('form');const id=button?.[0]?.dataset.product_id||form?.dataset.product_id;const card=button?.[0]?.closest('.sp-product-card'),quantity=Number(form?.querySelector('[name="quantity"]')?.value||1),price=Number(form?.dataset.spfixPrice||card?.dataset.productPrice||0);track('add_to_cart',{ecommerce:{currency:cfg.currency,value:price*quantity,items:[{item_id:String(id||''),price,quantity}]}});document.getElementById('sp-quick-add')?.close();});
-  const commerceEvents=document.getElementById('sp-ecommerce-events');
-  if(commerceEvents){try{JSON.parse(commerceEvents.textContent).forEach(data=>{if(data.event==='purchase'){const key='sp-purchase-'+data.ecommerce.transaction_id;if(sessionStorage.getItem(key))return;sessionStorage.setItem(key,'1');}track(data.event,{ecommerce:data.ecommerce});});}catch{}}
-  const result=document.getElementById('sp-custom-result');if(result){try{const data=JSON.parse(result.textContent);track('custom_order_submit',{method:data.type,product_id:data.product_id});if(data.type==='cart')track('add_to_cart',{ecommerce:{currency:cfg.currency,value:Number(data.unit_price)*data.quantity,items:[{item_id:String(data.product_id),price:Number(data.unit_price),quantity:data.quantity}]}});sessionStorage.removeItem('seedprints-custom-draft');}catch{}}
-  window.seedprintsTrack=track;
+  // Closing quick-add is a UI action, independent of analytics consent.
+  $(document.body).on('added_to_cart.spQuickClose',()=>{document.getElementById('sp-quick-add')?.close();});
 })();

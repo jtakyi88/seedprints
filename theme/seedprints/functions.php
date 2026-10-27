@@ -26,7 +26,9 @@ add_action( 'wp_enqueue_scripts', function () {
 	$path = '/assets/css/theme.css';
 	wp_enqueue_style( 'seedprints-storefront', get_theme_file_uri( $path ), array(), (string) filemtime( get_theme_file_path( $path ) ) );
 	wp_enqueue_script( 'seedprints-storefront', get_theme_file_uri( '/assets/js/storefront.js' ), array( 'jquery', 'seedprints-commerce' ), (string) filemtime( get_theme_file_path( '/assets/js/storefront.js' ) ), true );
-	if ( is_page( 'custom' ) ) { wp_enqueue_script( 'seedprints-custom', get_theme_file_uri( '/assets/js/custom.js' ), array( 'seedprints-storefront' ), (string) filemtime( get_theme_file_path( '/assets/js/custom.js' ) ), true ); }
+	wp_enqueue_script( 'seedprints-analytics', get_theme_file_uri( '/assets/js/analytics.js' ), array( 'jquery', 'seedprints-storefront' ), (string) filemtime( get_theme_file_path( '/assets/js/analytics.js' ) ), true );
+	$analytics = function_exists( 'sp_analytics_configuration' ) ? sp_analytics_configuration() : array( 'allowed' => false, 'measurementId' => '' );
+	if ( is_page( 'custom' ) ) { wp_enqueue_script( 'seedprints-custom', get_theme_file_uri( '/assets/js/custom.js' ), array( 'seedprints-analytics' ), (string) filemtime( get_theme_file_path( '/assets/js/custom.js' ) ), true ); }
 	if ( is_product() ) {
 		foreach ( array( 'wc-flexslider', 'wc-photoswipe', 'wc-photoswipe-ui-default' ) as $handle ) { wp_enqueue_script( $handle ); }
 		wp_enqueue_style( 'photoswipe' ); wp_enqueue_style( 'photoswipe-default-skin' );
@@ -41,6 +43,8 @@ add_action( 'wp_enqueue_scripts', function () {
 		'loggedIn' => is_user_logged_in(),
 		'production' => 'production' === wp_get_environment_type(),
 		'currency' => get_woocommerce_currency(),
+		'analyticsAllowed' => $analytics['allowed'],
+		'ga4MeasurementId' => $analytics['measurementId'],
 	) );
 }, 10010 );
 

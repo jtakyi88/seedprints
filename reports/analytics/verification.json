@@ -1,0 +1,10 @@
+{
+  "client_assertions": 13,
+  "server_assertions": 9,
+  "staging_browser_events": "browser-events.json",
+  "synthetic_orders_created": 0,
+  "payments_attempted": 0,
+  "emails_sent": 0,
+  "analytics_requests_sent": 0,
+  "purchase_delivery": "Not verified with a real paid order"
+}
