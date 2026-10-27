@@ -12,7 +12,6 @@ require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/catalog.php';
 require_once __DIR__ . '/inc/pages.php';
 require_once __DIR__ . '/inc/size-guide.php';
-require_once __DIR__ . '/inc/performance.php';
 
 add_action( 'after_setup_theme', function () {
 	load_theme_textdomain( 'seedprints', get_template_directory() . '/languages' );
