@@ -8,8 +8,8 @@
  * Text Domain: seedprints-fixes
  */
 defined( 'ABSPATH' ) || exit;
-define( 'SPFIX_DIR', plugin_dir_path( __FILE__ ) );
-define( 'SPFIX_URL', plugin_dir_url( __FILE__ ) );
+if ( ! defined( 'SPFIX_DIR' ) ) { define( 'SPFIX_DIR', plugin_dir_path( __FILE__ ) ); }
+if ( ! defined( 'SPFIX_URL' ) ) { define( 'SPFIX_URL', plugin_dir_url( __FILE__ ) ); }
 require_once SPFIX_DIR . 'includes/layout.php';
 require_once SPFIX_DIR . 'includes/commerce.php';
 require_once SPFIX_DIR . 'includes/checkout.php';
