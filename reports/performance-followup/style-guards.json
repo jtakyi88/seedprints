@@ -1,0 +1,15 @@
+{
+  "assertions": 18,
+  "passed": true,
+  "settings_changed": false,
+  "preserved": [
+    "early-loaded styles",
+    "native WooCommerce blocks",
+    "cart",
+    "checkout",
+    "account",
+    "admin",
+    "other themes",
+    "native wallet styles"
+  ]
+}
