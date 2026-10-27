@@ -19,15 +19,17 @@ function spfix_icon( $name ) {
 }
 
 function spfix_navigation() {
-	$links = array(
+	$links = apply_filters( 'seedprints_navigation_links', array(
 		'Apparel' => home_url( '/product-category/apparel/' ),
 		'Home & table' => home_url( '/product-category/home-essentials/' ),
 		'Custom' => home_url( '/product-category/custom-prints-and-more/' ),
 		'Our story' => home_url( '/about-us/' ),
-	);
+	) );
+	ob_start();
 	foreach ( $links as $label => $url ) {
 		echo '<a href="' . esc_url( $url ) . '">' . esc_html( $label ) . '</a>';
 	}
+	echo apply_filters( 'seedprints_navigation_markup', ob_get_clean(), $links );
 }
 
 function spfix_bag_count() {
@@ -40,14 +42,14 @@ add_filter( 'body_class', function ( $classes ) {
 	return $classes;
 } );
 
-add_action( 'wp_body_open', function () {
+function spfix_header( $logo_id = 0 ) {
 	if ( ! class_exists( 'WooCommerce' ) ) { return; }
 	$checkout = is_checkout() && ! is_order_received_page();
 	?>
 	<a class="spfix-skip" href="#spfix-content-start">Skip to content</a>
 	<?php if ( ! $checkout ) : ?><div class="spfix-ribbon">Bible Made Simple. Faith for everyday life.</div><?php endif; ?>
 	<header class="spfix-header" aria-label="Seed Prints">
-		<a class="spfix-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo wp_get_attachment_image( 11863, 'medium', false, array( 'alt' => 'Seed Prints — Bible Made Simple', 'loading' => 'eager' ) ); ?></a>
+		<a class="spfix-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo wp_get_attachment_image( $logo_id ?: ( get_theme_mod( 'custom_logo' ) ?: 11863 ), 'medium', false, array( 'alt' => 'Seed Prints — Bible Made Simple', 'loading' => 'eager' ) ); ?></a>
 		<?php if ( ! $checkout ) : ?>
 			<nav class="spfix-desktop-nav" aria-label="Shop"><?php spfix_navigation(); ?></nav>
 			<details class="spfix-mobile-menu"><summary>Menu</summary><nav aria-label="Mobile shop"><?php spfix_navigation(); ?></nav></details>
@@ -63,13 +65,14 @@ add_action( 'wp_body_open', function () {
 	</header>
 	<div id="spfix-content-start" tabindex="-1"></div>
 	<?php
-}, 5 );
+}
+add_action( 'wp_body_open', 'spfix_header', 5 );
 
 function spfix_bag_lines() {
 	ob_start();
 	echo '<div class="spfix-bag-lines">';
 	if ( ! WC()->cart || WC()->cart->is_empty() ) {
-		echo '<p>Your bag is waiting for something meaningful.</p><a class="spfix-button spfix-button-secondary" href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '">Shop the collection</a>';
+		echo '<p>Your bag is waiting for something meaningful.</p><a class="spfix-button" href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '">Shop the collection</a>';
 	} else {
 		echo '<ul class="spfix-bag-list">';
 		foreach ( WC()->cart->get_cart() as $key => $item ) {
@@ -82,7 +85,9 @@ function spfix_bag_lines() {
 			echo '<p>Quantity: ' . absint( $item['quantity'] ) . ' · ' . wp_kses_post( WC()->cart->get_product_subtotal( $product, $item['quantity'] ) ) . '</p>';
 			echo '<a class="spfix-remove" href="' . esc_url( wc_get_cart_remove_url( $key ) ) . '" data-cart-key="' . esc_attr( $key ) . '" aria-label="' . esc_attr( 'Remove ' . $name ) . '">Remove</a></div></li>';
 		}
-		echo '</ul><div class="spfix-bag-subtotal"><strong>Subtotal</strong><strong>' . wp_kses_post( WC()->cart->get_cart_subtotal() ) . '</strong></div><p class="spfix-bag-note">Shipping and taxes are calculated at checkout.</p>';
+		echo '</ul>';
+		do_action( 'seedprints_bag_merchandising' );
+		echo '<div class="spfix-bag-subtotal"><strong>Subtotal</strong><strong>' . wp_kses_post( WC()->cart->get_cart_subtotal() ) . '</strong></div><p class="spfix-bag-note">Shipping and taxes are calculated at checkout.</p>';
 	}
 	echo '</div>';
 	return ob_get_clean();

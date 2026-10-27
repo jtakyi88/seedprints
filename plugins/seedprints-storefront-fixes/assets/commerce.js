@@ -83,6 +83,7 @@
     window.jQuery(document.body).on('found_variation.spfix', 'form.variations_form', function (event, variation) {
       this.dataset.spfixAvailable = variation.is_in_stock && variation.is_purchasable && variation.variation_is_active ? 'yes' : 'no';
       this.dataset.spfixVariation = String(variation.variation_id || '');
+      this.dataset.spfixPrice = String(variation.display_price || 0);
       this.dataset.spfixSelection = selectionSignature(this);
       const id = this.querySelector('input[name="variation_id"]');
       if (id) id.value = variation.variation_id || '0';
@@ -176,10 +177,12 @@
     const labels = missing.map(select => form.querySelector(`label[for="${CSS.escape(select.id)}"]`)?.textContent.trim() || select.name.replace('attribute_pa_', '').replace('attribute_', ''));
     const feedback = form.querySelector('.spfix-options-feedback');
     if (feedback) feedback.textContent = `Choose ${labels.join(' and ')} to add this item.`;
-    const choice = missing[0].closest('tr')?.querySelector('li[tabindex="0"]');
+    const choice = missing[0].closest('tr')?.querySelector('li[tabindex="0"], [data-sp-option]:not(:disabled)');
     (choice || missing[0]).focus();
   }, true);
-  document.querySelectorAll('form.cart:not(.grouped_form)').forEach(form => {
+  function initCart(form) {
+    if (form.dataset.spfixBound) return;
+    form.dataset.spfixBound = 'yes';
     form.addEventListener('submit', async event => {
       const button = event.submitter || form.querySelector('.single_add_to_cart_button');
       if (!button?.classList.contains('single_add_to_cart_button')) return;
@@ -197,6 +200,9 @@
       const product = variation && variation !== '0' ? variation : data.get('add-to-cart') || button.value;
       if (!product) return;
       event.preventDefault();
+      // Only the Woo AJAX endpoint may perform this add. The classic
+      // add-to-cart field would also trigger WC_Form_Handler on wp_loaded.
+      data.delete('add-to-cart');
       data.set('product_id', product);
       data.set('quantity', data.get('quantity') || '1');
       form.dataset.spfixBusy = 'yes';
@@ -226,12 +232,18 @@
         if (form.classList.contains('variations_form')) syncOptions(form);
       }
     });
-  });
+  }
+  window.seedprintsDialogs = {open:openDialog, initCart};
+  document.querySelectorAll('form.cart:not(.grouped_form)').forEach(initCart);
+
   bag?.addEventListener('click', async event => {
     const link = event.target.closest('.spfix-remove');
     if (!link || link.getAttribute('aria-busy') === 'true') return;
     event.preventDefault();
     link.setAttribute('aria-busy', 'true');
+    const originalLabel = link.textContent;
+    link.textContent = 'Removing…';
+    bag.querySelector('.spfix-bag-status').textContent = 'Removing item…';
     const data = new FormData();
     data.set('cart_item_key', link.dataset.cartKey);
     try {
@@ -249,6 +261,7 @@
     } catch {
       bag.querySelector('.spfix-bag-status').textContent = 'The item could not be removed. Please try again.';
       link.removeAttribute('aria-busy');
+      link.textContent = originalLabel;
     }
   });
   if (bag?.hasAttribute('data-spfix-auto-open')) openDialog(bag);

@@ -39,3 +39,4 @@ body .et-single-buy-now .button-text { color:#1f1b16 !important; }
   html { scroll-behavior: auto !important; }
   .back-top { transition: none !important; }
 }
+body .et-single-buy-now,body .et-single-buy-now .button-text{background:#1f1b16!important;color:#faf6ef!important}body .posted_in .detail-content,body .posted_in .detail-content a{color:#625b53!important}
