@@ -1,0 +1,18 @@
+{
+  "home": {
+    "stylesheet_count": 8,
+    "block_styles_absent": true,
+    "theme_styles_present": true,
+    "wallet_script_present": false,
+    "adsense_present": true,
+    "critical_error": false
+  },
+  "pdp": {
+    "stylesheet_count": 12,
+    "block_styles_absent": true,
+    "theme_styles_present": true,
+    "wallet_script_present": true,
+    "adsense_present": true,
+    "critical_error": false
+  }
+}

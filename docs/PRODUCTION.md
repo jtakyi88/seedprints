@@ -24,7 +24,7 @@ The standalone block theme and Seed Prints Core are deployed. The original XStor
 - Native populated checkout contains Square cards, Cash App and the digital-wallet area. No order or payment was submitted.
 - Ground Shipping quotes $6.50 for CT, DE, MA, MD, ME, NH, NJ, PA, RI and VT with the synthetic test item.
 - Custom product selection and John 3:16 lookup update the live preview. The custom form sends no-store/private cache headers.
-- Final tracked runtime code matches production byte-for-byte: 277 files. See `reports/production/deployed-source.json`.
+- Final tracked runtime code matches production byte-for-byte: 279 files. See `reports/production/deployed-source.json`.
 
 ## Analytics follow-up
 
@@ -49,7 +49,19 @@ These are cold-mobile Lighthouse laboratory samples on the same workstation, not
 
 The live LCP target below 2.5 seconds is **not met**. Field INP below 200 ms is unverified; TBT is not INP. Traces show substantial existing Square/Google Pay, Google-tag and AdSense work. The homepage's initial layout shift was corrected by rendering hero copy before its photo. An additional dependency-order optimization was reverted after its live wallet/resize regression check stalled; native ordering remains.
 
-Authoritative live reports: `reports/production/home-stable-lighthouse.report.html` and `reports/production/pdp-lighthouse.report.html`. Earlier live diagnostics are retained locally, not substituted for these results.
+Initial release reports: `reports/production/home-stable-lighthouse.report.html` and `reports/production/pdp-lighthouse.report.html`. Earlier live diagnostics are retained locally, not substituted for these results.
+
+## Performance and SEO follow-up
+
+PR 20 skips two late block-only stylesheets only after rendering confirms a page has no native WooCommerce blocks. Early-loaded CSS, native Woo blocks, cart, checkout, account, admin and native wallet styling remain. The live baseline transferred 31,920 bytes for these two stylesheets (93,901 bytes decoded); both requests are absent from Home and PDP after deployment. Live populated checkout retains both styles and its Square/Cash App/wallet markup. Eighteen isolated guard assertions and eight staging responsive checks passed; both staging axe scans had zero violations and the variant button moved 0 px.
+
+The paired homepage laboratory samples are 54 → 55 performance, 3.5 → 3.4 s LCP, 0.005 → 0 CLS and 7,830 → 9,110 ms TBT. Accessibility and SEO remain 100. These single samples vary; the small LCP difference is not proof of a causal speed gain. Ads, analytics and native wallet scripts remain active. Anonymous repeat GETs returned a SiteGround cache hit around 0.4 seconds; cache settings were already enabled and were not changed.
+
+PR 21 adds missing PDP meta descriptions from existing verse meaning or product copy, with a product-name/brand fallback and dedicated-SEO-plugin deferral. Legacy prose containing written prices is excluded from snippets. For example, the placemat copy mentions $12 while its stored price is $15. Original prose and stored prices were preserved; written-price content needs owner review. Home, simple and variable products each return exactly one description. No product content, prices or merchant settings changed.
+
+The final live samples report Home **55 performance / 100 accessibility / 100 SEO**, 3.4 s LCP, 0 CLS and 9,110 ms TBT; PDP **37 / 100 / 100**, 5.1 s LCP, 0 CLS and 13,350 ms TBT. The earlier CSS-only PDP sample was 5.2 s LCP. No scripts or resources were blocked to produce these scores. These are laboratory samples, not field Core Web Vitals, and neither page meets the LCP target.
+
+Current follow-up measurements and retained reports: `reports/performance-followup/` and `reports/seo-followup/`. Earlier release reports above remain historical evidence. The live LCP target remains unmet and field INP remains unverified.
 
 ## Remaining work
 
