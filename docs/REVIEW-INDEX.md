@@ -23,3 +23,11 @@ Review Phase 1 PRs 1–10 in order, then the storefront rebuild. Each PR initial
 Source review checkout: `development/github` in the local Seed Prints project. Original development histories and installable packages remain available in the local handoff.
 
 See [QA evidence](QA.md) and [remaining launch work and rollback](RELEASE.md). No deployment automation was added.
+
+## Production follow-ups
+
+- [#12](https://github.com/jtakyi88/seedprints/pull/12): accessible bag label/count.
+- [#13](https://github.com/jtakyi88/seedprints/pull/13): copy-first hero markup; live CLS 0.
+- [#14](https://github.com/jtakyi88/seedprints/pull/14) was reverted by [#15](https://github.com/jtakyi88/seedprints/pull/15) after incomplete live wallet/resize verification. Native script ordering remains.
+
+See [production release evidence](PRODUCTION.md). The original ten exported Phase 1 patches are historical; use current `main` or the updated installable packages for the final release.

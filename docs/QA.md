@@ -2,6 +2,8 @@
 
 Preview: https://try.seedprints.com/ (protected staging).
 
+These are historical pre-release staging measurements. For the deployed site with live integrations, see [production verification](PRODUCTION.md) and `reports/production/`.
+
 ## Measured Lighthouse results
 
 Mobile emulation, default simulated throttling, isolated Chrome 151 runs on the same workstation. These are laboratory samples, not field Core Web Vitals. Staging deliberately has no page caching and is not indexable.

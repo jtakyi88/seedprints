@@ -1,0 +1,282 @@
+[
+  {
+    "route": "home",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "home",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "home",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "home",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  },
+  {
+    "route": "shop",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "shop",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "shop",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "shop",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  },
+  {
+    "route": "pdp",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "pdp",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "pdp",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "pdp",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  },
+  {
+    "route": "custom",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "custom",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "custom",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "custom",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  },
+  {
+    "route": "story",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "story",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "story",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "story",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  },
+  {
+    "route": "cart",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "cart",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "cart",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "cart",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  },
+  {
+    "route": "checkout",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "checkout",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "checkout",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "checkout",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  }
+]

@@ -1,0 +1,78 @@
+{
+    "synthetic_product": 657,
+    "quantity": 1,
+    "quotes": {
+        "CT": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "DE": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "MA": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "MD": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "ME": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "NH": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "NJ": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "PA": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "RI": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ],
+        "VT": [
+            {
+                "method": "flexible_shipping_single",
+                "label": "Ground Shipping",
+                "cost": 6.5
+            }
+        ]
+    },
+    "settings_changed": false,
+    "orders_created": 0
+}
