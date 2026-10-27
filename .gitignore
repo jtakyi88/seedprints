@@ -6,6 +6,7 @@ node_modules/
 *.pem
 *.key
 wp-config.php
+
 ghostshell.txt
 ssh/
 *.zip

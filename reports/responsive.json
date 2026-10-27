@@ -1,0 +1,319 @@
+{
+  "source": "Final CUA Chrome rendered DOM after load, including native gallery and preserved add-ons; classic scrollbar 15px",
+  "checks": [
+    {
+      "path": "/",
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/shop/",
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/product/jesus-died-once/",
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/cart/",
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/checkout/",
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/custom/",
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/about-us/",
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/shop/",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/product/jesus-died-once/",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/cart/",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/checkout/",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/custom/",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/about-us/",
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/",
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/shop/",
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/product/jesus-died-once/",
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/cart/",
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/checkout/",
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/custom/",
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/about-us/",
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/shop/",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/product/jesus-died-once/",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/cart/",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/checkout/",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/custom/",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    },
+    {
+      "path": "/about-us/",
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "header": 1,
+      "main": 1
+    }
+  ],
+  "variation_button_checks": [
+    {
+      "viewport": 1440,
+      "before": 856.046875,
+      "after": 856.046875
+    },
+    {
+      "viewport": 375,
+      "before": 1382.796875,
+      "after": 1382.796875
+    }
+  ],
+  "final_pdp_recheck": [
+    {
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "h1": 1,
+      "galleries": 1,
+      "thumbs": 3,
+      "before": 1450.796875,
+      "after": 1450.796875,
+      "button_width": 328,
+      "form_width": 328
+    },
+    {
+      "width": 768,
+      "client": 753,
+      "scroll": 753,
+      "h1": 1,
+      "galleries": 1,
+      "thumbs": 3,
+      "before": 972.90625,
+      "after": 972.90625,
+      "button_width": 320.484375,
+      "form_width": 320.484375
+    },
+    {
+      "width": 1280,
+      "client": 1265,
+      "scroll": 1265,
+      "h1": 1,
+      "galleries": 1,
+      "thumbs": 3,
+      "before": 910.3125,
+      "after": 910.3125,
+      "button_width": 549.0625,
+      "form_width": 549.0625
+    },
+    {
+      "width": 1440,
+      "client": 1425,
+      "scroll": 1425,
+      "h1": 1,
+      "galleries": 1,
+      "thumbs": 3,
+      "before": 916.046875,
+      "after": 916.046875,
+      "button_width": 579.0625,
+      "form_width": 579.0625
+    }
+  ]
+}

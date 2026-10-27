@@ -1,0 +1,74 @@
+:root {
+  --sp-ink: #1f1b16;
+  --sp-parchment: #faf6ef;
+  --sp-linen: #efe7da;
+  --sp-red: #c8102e;
+  --sp-olive: #5b6b3a;
+  --sp-gold: #b8893b;
+  --sp-stone: #8a8178;
+  /* Stone and Gold remain brand tokens; use darker text for small copy. */
+  --sp-text-muted: #625b53;
+  --sp-display: var(--wp--preset--font-family--display);
+  --sp-body: var(--wp--preset--font-family--body);
+  --sp-space-1: 8px;
+  --sp-space-2: 16px;
+  --sp-space-3: 24px;
+  --sp-space-4: 32px;
+  --sp-space-5: 40px;
+  --sp-space-6: 48px;
+  --sp-space-8: 64px;
+  --sp-space-12: 96px;
+  --sp-radius: 12px;
+  --sp-pill: 999px;
+  --sp-control-height: 48px;
+  --sp-motion: 160ms;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--sp-parchment); color: var(--sp-ink); }
+img, video { max-inline-size: 100%; block-size: auto; }
+main { min-inline-size: 0; padding-block: var(--sp-space-6); }
+:where(h1,h2,h3,p) { overflow-wrap: break-word; }
+:where(a,button,input,select,textarea,summary):focus-visible {
+  outline: 3px solid var(--sp-olive);
+  outline-offset: 4px;
+}
+.sp-header, .sp-footer { padding: var(--sp-space-3) var(--sp-space-2); }
+.sp-footer { background: var(--sp-linen); }
+.sp-copyright { color: var(--sp-text-muted); }
+.sp-button, .wp-block-button__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--sp-control-height);
+  gap: var(--sp-space-1);
+  padding: var(--sp-space-1) var(--sp-space-3);
+  border: 1px solid var(--sp-ink);
+  border-radius: var(--sp-pill);
+  background: var(--sp-ink);
+  color: var(--sp-parchment);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sp-button--secondary, .is-style-outline .wp-block-button__link {
+  background: transparent;
+  color: var(--sp-ink);
+}
+.sp-button:disabled { cursor: not-allowed; opacity: .65; }
+.sp-card { border-radius: var(--sp-radius); background: var(--sp-linen); }
+.sp-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 30%);
+  gap: var(--sp-space-3);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: var(--sp-space-1);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --sp-motion: 0ms; }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,22 @@
+{
+  "transitional_plugin_required": false,
+  "home_h1": 1,
+  "assets": [
+    {
+      "url": "https://try.seedprints.com/wp-content/themes/seedprints/lib/commerce/assets/layout.css?ver=1793087133",
+      "status": 200
+    },
+    {
+      "url": "https://try.seedprints.com/wp-content/themes/seedprints/lib/commerce/assets/commerce.css?ver=1793081428",
+      "status": 200
+    },
+    {
+      "url": "https://try.seedprints.com/wp-content/themes/seedprints/lib/commerce/assets/layout.js?ver=1793077809",
+      "status": 200
+    },
+    {
+      "url": "https://try.seedprints.com/wp-content/themes/seedprints/lib/commerce/assets/commerce.js?ver=1793090951",
+      "status": 200
+    }
+  ]
+}
