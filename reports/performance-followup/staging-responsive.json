@@ -1,0 +1,82 @@
+[
+  {
+    "route": "home",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "home",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "home",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "home",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  },
+  {
+    "route": "pdp",
+    "client": 360,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 375
+  },
+  {
+    "route": "pdp",
+    "client": 753,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 768
+  },
+  {
+    "route": "pdp",
+    "client": 1265,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "route": "pdp",
+    "client": 1425,
+    "criticalError": false,
+    "h1": 1,
+    "header": 1,
+    "main": 1,
+    "overflow": 0,
+    "width": 1440
+  }
+]

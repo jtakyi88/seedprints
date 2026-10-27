@@ -1,0 +1,14 @@
+{
+  "home": {
+    "block_styles_absent": true,
+    "theme_styles_present": true,
+    "commerce_styles_present": true,
+    "critical_error": false
+  },
+  "pdp": {
+    "block_styles_absent": true,
+    "theme_styles_present": true,
+    "commerce_styles_present": true,
+    "critical_error": false
+  }
+}
