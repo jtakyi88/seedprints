@@ -1,0 +1,17 @@
+[
+  {
+    "route": "pdp",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodeCount": 6
+      },
+      {
+        "id": "color-contrast",
+        "nodeCount": 10
+      }
+    ],
+    "passes": 31,
+    "violations": []
+  }
+]

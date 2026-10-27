@@ -1,0 +1,18 @@
+{
+  "simple": {
+    "events": 1,
+    "item_id": "613",
+    "quantity": 2,
+    "value": 30
+  },
+  "variation": {
+    "events": 1,
+    "item_id": "657",
+    "variant": "12178",
+    "value": 30
+  },
+  "transport": "isolated browser gtag spy on protected staging; no analytics requests",
+  "orders_created": 0,
+  "payments_attempted": 0,
+  "emails_sent": 0
+}

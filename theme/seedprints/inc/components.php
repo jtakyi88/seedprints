@@ -35,6 +35,7 @@ function sp_product_card( $product, $eager = false ) {
 	$custom = function_exists( 'sp_custom_product_allowed' ) && sp_custom_product_allowed( $id );
 	$tracking_price = (float) $product->get_price();
 	if ( $custom && function_exists( 'sp_custom_fee' ) ) { $fee = sp_custom_fee( $id ); if ( ! is_wp_error( $fee ) ) { $tracking_price += $fee; } }
+	$tracking_price = function_exists( 'sp_analytics_item' ) ? sp_analytics_item( $product )['price'] : wc_get_price_excluding_tax( $product, array( 'price' => $tracking_price ) );
 	ob_start(); ?>
 	<article class="sp-product-card <?php echo has_term( 'apparel', 'product_cat', $id ) ? 'sp-product-card--apparel' : 'sp-product-card--objects'; ?>" data-product-id="<?php echo absint( $id ); ?>" data-product-name="<?php echo esc_attr( $product->get_name() ); ?>" data-product-price="<?php echo esc_attr( $tracking_price ); ?>">
 		<div class="sp-product-photo">
