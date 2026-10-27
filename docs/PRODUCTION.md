@@ -24,7 +24,15 @@ The standalone block theme and Seed Prints Core are deployed. The original XStor
 - Native populated checkout contains Square cards, Cash App and the digital-wallet area. No order or payment was submitted.
 - Ground Shipping quotes $6.50 for CT, DE, MA, MD, ME, NH, NJ, PA, RI and VT with the synthetic test item.
 - Custom product selection and John 3:16 lookup update the live preview. The custom form sends no-store/private cache headers.
-- Final tracked runtime code matches production byte-for-byte: 276 files. See `reports/production/deployed-source.json`.
+- Final tracked runtime code matches production byte-for-byte: 277 files. See `reports/production/deployed-source.json`.
+
+## Analytics follow-up
+
+PRs 17 and 18 correct product IDs, variation prices and quantities, native full-page add receipts, tax-exclusive custom prices and discounted checkout values. The seven storefront events target the existing verified Site Kit GA4 destination. Only its duplicate WooCommerce event-provider script is suppressed; the Google tag, Google Ads and AdSense remain. Existing logged-in-user exclusions were verified, including WordPress’s localized string flags. No tag, consent or integration settings changed.
+
+Validation: 14 isolated client assertions, nine staging PHP assertions, and actual simple/variable staging forms each producing one accurate event to an isolated browser spy. The product page passes all four responsive widths, zero axe violations and zero button movement. Live markup confirms the destination, first-party analytics asset, product metadata and absence of the duplicate provider. Native populated checkout still renders Square, Cash App and its wallet area. No test analytics requests, orders, payments or emails were sent. Reports: `reports/analytics/`.
+
+GA4 account-side receipt and paid-purchase delivery remain unverified. The isolated purchase fixture tests browser deduplication; it does not demonstrate a real payment or account-side conversion.
 
 ## Performance evidence and limits
 
@@ -48,7 +56,7 @@ Authoritative live reports: `reports/production/home-stable-lighthouse.report.ht
 1. Decide whether storefront display ads should be suppressed. The proposed exclusion keeps Analytics, Google Ads conversion tracking and blog display ads. It is **not installed**; existing monetization remains unchanged.
 2. Choose/connect the lifecycle email platform. Existing HappyForms confirmation is configured to deliver the existing 10% coupon through SMTP; actual email delivery was not tested. Abandoned-cart and photo-review-request automations are not live.
 3. Validate paid checkout and eligible Apple Pay/Google Pay devices with the merchant. The regular-browser GPay button was observed; no payment was attempted. PayPal is not installed and needs the owner's merchant connection/decision.
-4. Verify GA4 destination mapping, consent and duplicate-event handling for the prepared production dataLayer payloads. Purchase-event delivery has not been verified with a paid test order.
+4. Verify account-side GA4 receipt and paid-purchase delivery with the merchant. Destination mapping and duplicate-handler suppression are verified in deployed markup; consent configuration was preserved.
 5. Complete performance work and field measurements. External address lookup is not connected; native browser autofill remains. Confirm optional shipping-threshold/custom-turnaround claims and supply approved customer lifestyle/photos and remaining product verse copy.
 
 ## Rollback
