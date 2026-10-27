@@ -45,6 +45,7 @@ add_filter( 'body_class', function ( $classes ) {
 function spfix_header( $logo_id = 0 ) {
 	if ( ! class_exists( 'WooCommerce' ) ) { return; }
 	$checkout = is_checkout() && ! is_order_received_page();
+	$bag_count = WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
 	?>
 	<a class="spfix-skip" href="#spfix-content-start">Skip to content</a>
 	<?php if ( ! $checkout ) : ?><div class="spfix-ribbon">Bible Made Simple. Faith for everyday life.</div><?php endif; ?>
@@ -60,7 +61,7 @@ function spfix_header( $logo_id = 0 ) {
 				<a href="<?php echo esc_url( home_url( '/wishlist/' ) ); ?>" aria-label="Wishlist"><?php echo spfix_icon( 'heart' ); ?><span class="spfix-tool-text">Wishlist</span></a>
 				<a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" aria-label="Account"><?php echo spfix_icon( 'account' ); ?><span class="spfix-tool-text">Account</span></a>
 			<?php endif; ?>
-			<a class="spfix-bag-trigger" href="<?php echo esc_url( wc_get_cart_url() ); ?>" data-spfix-open="spfix-bag" aria-label="Open your bag"><?php echo spfix_icon( 'bag' ); ?><span class="spfix-tool-text">Bag</span><?php echo spfix_bag_count(); ?></a>
+			<a class="spfix-bag-trigger" href="<?php echo esc_url( wc_get_cart_url() ); ?>" data-spfix-open="spfix-bag" aria-label="<?php echo esc_attr( sprintf( 'Bag %d %s. Open your bag.', $bag_count, 1 === $bag_count ? 'item' : 'items' ) ); ?>"><?php echo spfix_icon( 'bag' ); ?><span class="spfix-tool-text">Bag</span> <?php echo spfix_bag_count(); ?></a>
 		</div>
 	</header>
 	<div id="spfix-content-start" tabindex="-1"></div>
