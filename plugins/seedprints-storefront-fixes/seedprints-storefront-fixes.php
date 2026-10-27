@@ -11,6 +11,7 @@ define( 'SPFIX_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SPFIX_URL', plugin_dir_url( __FILE__ ) );
 require_once SPFIX_DIR . 'includes/layout.php';
 require_once SPFIX_DIR . 'includes/commerce.php';
+require_once SPFIX_DIR . 'includes/checkout.php';
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'seedprints-layout-fixes', SPFIX_URL . 'assets/layout.css', array(), (string) filemtime( SPFIX_DIR . 'assets/layout.css' ) );
