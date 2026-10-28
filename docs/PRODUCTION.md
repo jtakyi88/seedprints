@@ -24,7 +24,7 @@ The standalone block theme and Seed Prints Core are deployed. The original XStor
 - Native populated checkout contains Square cards, Cash App and the digital-wallet area. No order or payment was submitted.
 - Ground Shipping quotes $6.50 for CT, DE, MA, MD, ME, NH, NJ, PA, RI and VT with the synthetic test item.
 - Custom product selection and John 3:16 lookup update the live preview. The custom form sends no-store/private cache headers.
-- Final tracked runtime code matches production byte-for-byte: 279 files. See `reports/production/deployed-source.json`.
+- Final tracked runtime code matches production byte-for-byte: 280 files. See `reports/production/deployed-source.json`.
 
 ## Analytics follow-up
 
@@ -62,6 +62,16 @@ PR 21 adds missing PDP meta descriptions from existing verse meaning or product 
 The final live samples report Home **55 performance / 100 accessibility / 100 SEO**, 3.4 s LCP, 0 CLS and 9,110 ms TBT; PDP **37 / 100 / 100**, 5.1 s LCP, 0 CLS and 13,350 ms TBT. The earlier CSS-only PDP sample was 5.2 s LCP. No scripts or resources were blocked to produce these scores. These are laboratory samples, not field Core Web Vitals, and neither page meets the LCP target.
 
 Current follow-up measurements and retained reports: `reports/performance-followup/` and `reports/seo-followup/`. Earlier release reports above remain historical evidence. The live LCP target remains unmet and field INP remains unverified.
+
+## Mobile navigation follow-up — October 28, 2026
+
+PR 23 completes the photo-led mobile category drawer using six existing source photos and the shared native modal controls. The header's original menu remains the fallback without JavaScript or native-dialog support; desktop navigation remains above 1100 px. Native focus return, Escape, backdrop closing, background scroll locking and desktop-resize closing were verified. The minimal checkout header does not include the mobile drawer.
+
+Protected staging and live checks passed at 375, 768, 1280 and 1440 px with zero document or drawer overflow. Each run covered Home plus Shop, PDP, Custom and Our Story; category links, close controls, keyboard focus, resize behavior and the JavaScript-disabled menu passed. Both open-drawer axe scans per environment reported zero violations for the selected WCAG A/AA rule sets. Photos are lazy-loaded and no new image assets, plugins or runtime dependencies were added. Visual evidence and reproducible test instructions are in `reports/mobile-navigation/` and `tests/MOBILE-NAVIGATION.md`.
+
+Live populated checkout retains Square, Cash App and wallet markup, with no order/payment/email submitted. All 386 price rows and the commerce-settings hash still match the baseline. Original content, payment/shipping settings, ads and email integrations remain unchanged. All 280 tracked runtime files match production.
+
+Latest live homepage laboratory sample: **61 performance / 100 accessibility / 100 SEO**, **3.0 s LCP**, **0 CLS**, **8,580 ms TBT**. Existing ads, analytics and payment integrations were retained; no resources were blocked. This is a single sample, not proof that the drawer caused a speed improvement. The LCP target below 2.5 seconds remains unmet, and field INP remains unverified. The latest homepage report is `reports/mobile-navigation/home-lighthouse.report.html`; the most recent PDP measurement remains the October 27 follow-up above.
 
 ## Remaining work
 
