@@ -11,6 +11,7 @@ remove_action( 'wp_body_open', 'spfix_header', 5 );
 require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/catalog.php';
 require_once __DIR__ . '/inc/pages.php';
+require_once __DIR__ . '/inc/mobile-navigation.php';
 require_once __DIR__ . '/inc/size-guide.php';
 require_once __DIR__ . '/inc/performance.php';
 require_once __DIR__ . '/inc/seo.php';
