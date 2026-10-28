@@ -38,3 +38,14 @@ main{overflow-x:hidden}.sp-category-grid,.sp-rail,.sp-review-rail{position:relat
 .sp-pdp .summary .single_add_to_cart_button{width:100%!important;flex:1 0 100%!important}
 .sp-review-customer-photo{width:100%;height:180px;object-fit:cover;border-radius:8px}
 .sp-hero-photo>picture{display:contents}
+
+/* The mobile category drawer shares native modal focus and scroll handling. */
+.sp-mobile-toggle{display:none;border:0;border-radius:8px;background:transparent;color:var(--sp-ink);font:inherit;min-width:48px;min-height:48px;padding:8px;cursor:pointer}
+.sp-mobile-drawer{inset:0 auto 0 0;width:min(420px,100%);max-width:100%;height:100dvh;max-height:100dvh;margin:0;border-radius:0;padding:24px;overflow-y:auto;overscroll-behavior:contain}
+.sp-mobile-drawer .spfix-dialog-heading{margin-bottom:16px}.sp-mobile-drawer .spfix-dialog-heading h2{font:600 28px/1.2 var(--sp-display)}
+.sp-mobile-shop-all{display:flex;align-items:center;justify-content:space-between;min-height:48px;margin-bottom:16px;text-decoration:none;font-weight:600}
+.sp-mobile-category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.sp-mobile-category-grid>a{min-width:0;overflow:hidden;border-radius:var(--sp-radius);background:var(--sp-linen);text-decoration:none}
+.sp-mobile-arrow{flex-shrink:0}.sp-mobile-category-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 25%}.sp-mobile-category-grid>a>span{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;padding:8px 12px;font-size:14px;font-weight:600}
+.sp-mobile-menu-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;margin-top:24px;padding-top:16px;border-top:1px solid var(--sp-linen)}.sp-mobile-menu-links a{display:flex;align-items:center;min-height:48px;font-size:14px}
+@media(max-width:1100px){.sp-mobile-toggle{display:inline-flex;align-items:center;justify-content:center;margin-right:auto}}

@@ -1,0 +1,102 @@
+{
+  "base": "https://try.seedprints.com",
+  "widths": [
+    {
+      "desktopVisible": false,
+      "drawerCount": 1,
+      "h1": 1,
+      "overflow": 0,
+      "triggerVisible": true,
+      "width": 375,
+      "modal": {
+        "categories": [
+          "Women",
+          "Men",
+          "Youth",
+          "Home & table",
+          "Drinkware",
+          "Gifts"
+        ],
+        "focusInside": true,
+        "lazy": true,
+        "locked": "hidden",
+        "overflow": 0
+      }
+    },
+    {
+      "desktopVisible": false,
+      "drawerCount": 1,
+      "h1": 1,
+      "overflow": 0,
+      "triggerVisible": true,
+      "width": 768,
+      "modal": {
+        "categories": [
+          "Women",
+          "Men",
+          "Youth",
+          "Home & table",
+          "Drinkware",
+          "Gifts"
+        ],
+        "focusInside": true,
+        "lazy": true,
+        "locked": "hidden",
+        "overflow": 0
+      }
+    },
+    {
+      "desktopVisible": true,
+      "drawerCount": 1,
+      "h1": 1,
+      "overflow": 0,
+      "triggerVisible": false,
+      "width": 1280
+    },
+    {
+      "desktopVisible": true,
+      "drawerCount": 1,
+      "h1": 1,
+      "overflow": 0,
+      "triggerVisible": false,
+      "width": 1440
+    }
+  ],
+  "routes": [
+    {
+      "path": "/shop/",
+      "globalDrawer": true
+    },
+    {
+      "path": "/product/jesus-died-once/",
+      "globalDrawer": true
+    },
+    {
+      "path": "/custom/",
+      "globalDrawer": true
+    },
+    {
+      "path": "/about-us/",
+      "globalDrawer": true
+    }
+  ],
+  "axe": [
+    {
+      "width": 375,
+      "passes": 16,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "passes": 16,
+      "violations": []
+    }
+  ],
+  "keyboardFocusTrapped": true,
+  "escapeReturnsFocus": true,
+  "desktopResizeClosesDrawer": true,
+  "backdropCloses": true,
+  "closeButtonWorks": true,
+  "categoryNavigationWorks": true,
+  "noJavaScriptMenuWorks": true
+}

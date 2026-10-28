@@ -3,6 +3,27 @@
   const cfg = window.seedprintsSite;
   if (!cfg) return;
   const $ = window.jQuery;
+  // Enhance the server-rendered menu only when the shared modal controls are ready.
+  const mobileFallback = document.querySelector('.spfix-mobile-menu');
+  const mobileDrawer = document.getElementById('sp-mobile-navigation');
+  if (mobileFallback && mobileDrawer && window.seedprintsDialogs && typeof mobileDrawer.showModal === 'function') {
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'sp-mobile-toggle';
+    trigger.textContent = 'Menu';
+    trigger.dataset.spfixOpen = mobileDrawer.id;
+    trigger.setAttribute('aria-controls', mobileDrawer.id);
+    trigger.setAttribute('aria-haspopup', 'dialog');
+    mobileFallback.replaceWith(trigger);
+    const mobileViewport = matchMedia('(max-width:1100px)');
+    mobileViewport.addEventListener('change', event => {
+      if (!event.matches && mobileDrawer.open) {
+        mobileDrawer.close();
+        document.querySelector('.spfix-logo')?.focus({preventScroll:true});
+      }
+    });
+  }
+
   const say = text => { const node=document.getElementById('spfix-feedback'); if(node) node.textContent=text; };
   const api = async (path, options={}) => {
     const response=await fetch(cfg.api+path,{credentials:'same-origin',...options,headers:{...(cfg.nonce?{'X-WP-Nonce':cfg.nonce}:{}),...options.headers}});
